@@ -5,7 +5,7 @@ $listOrder	= '';
 $listDirn	= '';
 ?>
 
-<form action="<?php echo JRoute::_('index.php?option=com_etd&view=teses'); ?>" method="post" name="adminForm" id="adminForm">
+<form action="<?php echo JRoute::_('index.php?option=com_etd&view=etds'); ?>" method="post" name="adminForm" id="adminForm">
 	<div id="j-main-container" class="span10">
 
 		<div class="clearfix"> </div>

@@ -6,7 +6,7 @@
 			description="JGLOBAL_FIELD_ID_DESC"/>
 
 		<field name="titulo" type="text" class="inputbox"
-			size="40" label="JGLOBAL_TITLE"
+			size="100" label="JGLOBAL_TITLE"
 			description="COM_ETD_FIELD_TITLE_DESC" required="true" />
 
 	</fieldset>
