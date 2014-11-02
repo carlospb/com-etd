@@ -1,0 +1,11 @@
+{
+  "name": "Chapter-1",
+  "version": "1.0.0",
+  "homepage": "https://github.com/packt-mg/Chapter-1",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "src/bower_components"
+  ],
+  "dependencies": { }
+}
