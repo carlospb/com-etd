@@ -37,6 +37,6 @@ class EtdModelEtd extends JModelAdmin
 
 	protected function prepareTable($table)
 	{
-		$table->title		= htmlspecialchars_decode($table->title, ENT_QUOTES);
+		$table->titulo		= htmlspecialchars_decode($table->titulo, ENT_QUOTES);
 	}
 }
