@@ -5,7 +5,7 @@
 			readonly="true" class="readonly"
 			description="JGLOBAL_FIELD_ID_DESC"/>
 
-		<field name="title" type="text" class="inputbox"
+		<field name="titulo" type="text" class="inputbox"
 			size="40" label="JGLOBAL_TITLE"
 			description="COM_ETD_FIELD_TITLE_DESC" required="true" />
 
