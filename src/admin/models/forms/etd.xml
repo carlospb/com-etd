@@ -1,13 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
 <form>
-	<fieldset>
+	<fieldset name="myfields">
 		<field name="id" type="text" default="0" label="JGLOBAL_FIELD_ID_LABEL"
 			readonly="true" class="readonly"
 			description="JGLOBAL_FIELD_ID_DESC"/>
 
-		<field name="titulo" type="text" class="inputbox"
-			size="100" label="JGLOBAL_TITLE"
+		<field
+      name="catid"
+      type="category"
+      extension="com_folio"
+      class="inputbox"
+      default=""
+      label="COM_FOLIO_FIELD_CATID_LABEL"
+      description="COM_FOLIO_FIELD_CATID_DESC"
+    >
+      <option value="0">JOPTION_SELECT_CATEGORY</option>
+    </field>
+
+    <field name="state" type="list"
+      label="JSTATUS" description="JFIELD_PUBLISHED_DESC"
+      class="inputbox small" size="1" default="1" >
+      <option value="1">JPUBLISHED</option>
+      <option value="0">JUNPUBLISHED</option>
+      <option value="2">JARCHIVED</option>
+      <option value="-2">JTRASHED</option>
+    </field>
+
+    <field name="titulo" type="text" class="inputbox"
+			size="40" label="JGLOBAL_TITLE"
 			description="COM_ETD_FIELD_TITLE_DESC" required="true" />
+
+		<field name="autor" type="text" class="inputbox"
+			size="40" label="COM_ETD_FIELD_AUTOR_LABEL"
+			description="COM_ETD_FIELD_AUTOR_DESC" required="true" />
+
+		<field name="director" type="text" class="inputbox"
+			size="40" label="COM_ETD_FIELD_DIRECTOR_LABEL"
+			description="COM_ETD_FIELD_DIRECTOR_DESC" required="true" />
+
+		<field name="co_director" type="text" class="inputbox"
+			size="40" label="COM_ETD_FIELD_CODIRECTOR_LABEL"
+			description="COM_ETD_FIELD_CODIRECTOR_DESC" required="true" />
+
+		<field name="jurado" type="textarea" class="inputbox"
+      rows="3" cols="30" label="COM_ETD_FIELD_JURADO_LABEL"
+      description="COM_FOLIO_FIELD_JURADO_DESC" />
+
+    <field name="resumen" type="editor" buttons="true"
+      hide="pagebreak, readmore"
+      class="inputbox"
+      filter="JComponentHelper::filterText"
+      label="COM_ETD_FIELD_RESUMEN_LABEL"
+      description="COM_ETD_FIELD_JURADO_DESC" />
+
+
+
 
 	</fieldset>
 </form>

@@ -7,7 +7,7 @@
 	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
 	<authorEmail></authorEmail>
 	<authorUrl></authorUrl>
-	<version>0.1.3</version>
+	<version>0.1.5</version>
 	<description>COM_ETD_XML_DESCRIPTION</description>
 
 	<scriptfile>script.php</scriptfile>
@@ -22,13 +22,13 @@
 			<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
 		</sql>
 	</uninstall>
- 
+
 	<files folder="site">
 		<filename>index.html</filename>
 	</files>
 	<administration>
 		<menu img="class:category">COM_ETD_MENU</menu>
-		
+
 		<files folder="admin">
 			<filename>index.html</filename>
 			<filename>access.xml</filename>
@@ -42,7 +42,7 @@
 			<folder>tables</folder>
 			<folder>views</folder>
 		</files>
- 
+
 		<languages folder="admin">
 			<language tag="es-ES">language/es-ES/es-ES.com_etd.ini</language>
 			<language tag="es-ES">language/es-ES/es-ES.com_etd.sys.ini</language>
