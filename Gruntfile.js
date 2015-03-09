@@ -15,40 +15,43 @@ module.exports = function (grunt) {
     var config = {};
 
     config['exec'] = {
-      
+
       test: {
         cmd: "git describe --abbrev=0",
 
         stdout: false,
         stderr: false,
-        
+
         callback: function (error, stdout, stderr) {
           // recupera la salida del shell y lo guarda en el GitObj
           // Como el stdout contiene una nueva linea se la elimina del string
           GitObj = new GitObj ( stdout.replace( /\r?\n|\r/g, "" ) );
-          
-          //grunt.log.write( 'Current GIT TAG: ' + GitObj.lastTag );
+
+          grunt.log.write( 'Current GIT TAG: ' + GitObj.lastTag );
           //grunt.log.write( 'stderr: ' + stderr );
-        
+
           if (error !== null) {
             grunt.log.error('exec error: ' + error);
           }
-        }
+        },
       },
-      
+
     }
 
     // CONFIG GRUNT-XMLPOKE
     config['xmlpoke'] = {
+      options: {
+        failIfMissing: true
+      },
       updateVersion: {
         options: {
-          xpath: '/version',
-          value: GitObj.lastTag
+          xpath: '//version',
+          value: function() { return GitObj.lastTag }
         },
         files: {
-          'dest/etd.xml': 'src/etd.xml'
+          'src/etd.xml': 'src/etd.xml'
         },
-      }
+      },
     }
 
     // Config para contrib-compress
@@ -71,11 +74,11 @@ module.exports = function (grunt) {
         ]
       }
     }
-    
+
 
     grunt.initConfig(config);
 
-    var tasks = [ 'exec', ,'xmlpoke', 'compress' ];
+    var tasks = [ 'exec', 'xmlpoke', 'compress' ];
 
     grunt.registerTask('build', tasks);
 };

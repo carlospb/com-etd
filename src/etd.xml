@@ -1,13 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
-<extension type="component" version="3.0" method="upgrade">
+<?xml version="1.0" encoding="utf-8"?><extension type="component" version="3.0" method="upgrade">
 	<name>com_etd</name>
 	<author>Carlos Perez</author>
 	<creationDate>Noviembre 2014</creationDate>
 	<copyright>(C) 2014 . All rights reserved.</copyright>
 	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
-	<authorEmail></authorEmail>
-	<authorUrl></authorUrl>
-	<version>0.5.6</version>
+	<authorEmail/>
+	<authorUrl/>
+	<version>v0.1.5</version>
 	<description>COM_ETD_XML_DESCRIPTION</description>
 
 	<scriptfile>script.php</scriptfile>

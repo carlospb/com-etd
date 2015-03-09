@@ -1,6 +1,6 @@
 {
-  "name": "com_teses",
-  "version": "0.1.0",
+  "name": "com_etd",
+  "version": "0.1.2",
   "dependencies": {},
   "devDependencies": {
     "grunt": "^0.4.5",
@@ -14,7 +14,6 @@
     "grunt-rev": "~0.1.0",
     "grunt-usemin": "~2.0.2",
     "grunt-xmlpoke": "^0.8.0",
-    "grunt-zip": "^0.16.2",
     "matchdep": "~0.3.0"
   },
   "engines": {
