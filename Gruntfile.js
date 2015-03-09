@@ -38,6 +38,19 @@ module.exports = function (grunt) {
       
     }
 
+    // CONFIG GRUNT-XMLPOKE
+    config['xmlpoke'] = {
+      updateVersion: {
+        options: {
+          xpath: '/version',
+          value: GitObj.lastTag
+        },
+        files: {
+          'dest/etd.xml': 'src/etd.xml'
+        },
+      }
+    }
+
     // Config para contrib-compress
     config['compress'] = {
       main: {
@@ -62,7 +75,7 @@ module.exports = function (grunt) {
 
     grunt.initConfig(config);
 
-    var tasks = [ 'exec', 'compress' ];
+    var tasks = [ 'exec', ,'xmlpoke', 'compress' ];
 
     grunt.registerTask('build', tasks);
 };
